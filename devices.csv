@@ -1,0 +1,6 @@
+Device,Power,IdleHours,Department,Status
+Computer Lab PC,120,5,CSE,Idle
+Printer,60,4,Office,Standby
+Projector,200,2,Classroom,Idle
+WiFi Router,25,24,Network,Active
+Air Conditioner,1500,3,Lab,Standby

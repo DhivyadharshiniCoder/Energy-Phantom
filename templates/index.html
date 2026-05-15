@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Energy Phantom</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+    <h2>⚡ Energy Phantom</h2>
+
+    <ul>
+
+        <li>
+            <a href="#dashboard">🏠 Dashboard</a>
+        </li>
+
+        <li>
+            <a href="#analysis">📊 Device Analysis</a>
+        </li>
+
+        <li>
+            <a href="#alerts">🚨 Alerts</a>
+        </li>
+
+        <li>
+            <a href="#reports">📄 Reports</a>
+        </li>
+
+    </ul>
+
+</div>
+
+<!-- Main Content -->
+
+<div class="main" id="dashboard">
+
+    <!-- Top Header -->
+
+    <div style="
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-wrap:wrap;
+    ">
+
+        <div>
+
+            <h1>
+                Smart Phantom Power Monitoring Dashboard
+            </h1>
+
+            <p style="
+                color:#d8f3dc;
+                margin-top:-10px;
+                font-size:18px;
+            ">
+                Real-time Energy Monitoring and Optimization System
+            </p>
+
+        </div>
+
+        <div class="card"
+             style="
+                width:220px;
+                text-align:center;
+                padding:15px;
+             ">
+
+            <h3>System Status</h3>
+
+            <p style="color:#00ff99;">
+                ● ACTIVE
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Summary Cards -->
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>⚡ Total Energy Wastage</h3>
+
+            <p id="energy">0</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>💰 Electricity Cost</h3>
+
+            <p id="cost">0</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🌍 CO₂ Emission</h3>
+
+            <p id="carbon">0</p>
+
+        </div>
+
+    </div>
+
+    <!-- Alert Section -->
+
+    <div class="alert-box" id="alerts">
+
+        ⚠ Monitoring Active
+
+    </div>
+
+    <!-- Device Analysis -->
+
+    <div style="
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        margin-top:40px;
+    ">
+
+        <h2 id="analysis">
+            📊 Device Analysis
+        </h2>
+
+        <div class="card"
+             style="
+                width:200px;
+                text-align:center;
+                padding:12px;
+             ">
+
+            <h3>Devices Monitored</h3>
+
+            <p>5</p>
+
+        </div>
+
+    </div>
+
+    <!-- Device Cards -->
+
+    <div id="devices"></div>
+
+    <!-- Chart -->
+
+    <div style="margin-top:50px;">
+
+        <h2>📈 Energy Consumption Analytics</h2>
+
+        <canvas id="chart"></canvas>
+
+    </div>
+
+    <!-- Reports -->
+
+    <div id="reports"
+         class="card"
+         style="
+            margin-top:50px;
+            width:90%;
+         ">
+
+        <h2>📄 Reports Summary</h2>
+
+        <p style="
+            line-height:1.8;
+            font-size:17px;
+        ">
+
+            Energy Phantom is a smart web-based system
+            designed to detect and analyze phantom power
+            consumption in institutional environments.
+
+            The system provides real-time monitoring,
+            energy wastage estimation, cost analysis,
+            and carbon emission visualization to help
+            institutions improve energy efficiency and
+            sustainability practices.
+
+        </p>
+
+    </div>
+
+    <!-- Footer -->
+
+    <div style="
+        text-align:center;
+        margin-top:60px;
+        padding-bottom:20px;
+        color:#d8f3dc;
+    ">
+
+        <p>
+            Energy Phantom © 2026 |
+            Smart Energy Optimization System
+        </p>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
